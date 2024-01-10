@@ -4,6 +4,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.9.6 (2023-12-01)
+### Added
+- expose a `pss::get_default_pss_signature_algo_id` helper ([#393])
+- expose `pkcs1v15::RsaSignatureAssociatedOid` ([#392])
+
+[#392]: https://github.com/RustCrypto/RSA/pull/392
+[#393]: https://github.com/RustCrypto/RSA/pull/393
+
+## 0.9.5 (2023-11-27)
+### Added
+- Adds `RsaPrivateKey::from_primes` and `RsaPrivateKey::from_p_q` methods ([#386])
+
+[#386]: https://github.com/RustCrypto/RSA/pull/386
+
+## 0.9.4 (2023-11-20)
+### Added
+- Deterministic implementation of prime factors recovery ([#380])
+
+[#380]: https://github.com/RustCrypto/RSA/pull/380
+
+## 0.9.3 (2023-10-26)
+### Added
+- PKCS#8/SPKI decoding trait impls for `pkcs1v15` keys ([#346])
+- `hazmat` feature as a replacement for `expose-internals` ([#352])
+
+### Changed
+- Bump `serde` dependency to 1.0.184 ([#360])
+
+### Removed
+- Unused dependencies ([#357])
+
+[#346]: https://github.com/RustCrypto/RSA/pull/346
+[#352]: https://github.com/RustCrypto/RSA/pull/352
+[#357]: https://github.com/RustCrypto/RSA/pull/357
+[#360]: https://github.com/RustCrypto/RSA/pull/360
+
 ## 0.9.2 (2023-05-08)
 ### Fixed
 - pkcs1v15: have `fmt` impls call `SignatureEncoding::to_bytes` ([#330])
